@@ -1,0 +1,39 @@
+services:
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+      - ..:/workspace:cached
+    environment:
+      DB_HOST: db
+      DB_NAME: labdb
+      DB_USER: student
+      DB_PASS: student
+    depends_on:
+      - db
+
+  db:
+    image: mysql:8.4
+    restart: unless-stopped
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: labdb
+      MYSQL_USER: student
+      MYSQL_PASSWORD: student
+    volumes:
+      - db-data:/var/lib/mysql
+      - ../database/init.sql:/docker-entrypoint-initdb.d/init.sql:ro
+
+  phpmyadmin:
+    image: phpmyadmin:5
+    restart: unless-stopped
+    environment:
+      PMA_HOST: db
+      PMA_USER: student
+      PMA_PASSWORD: student
+    depends_on:
+      - db
+
+volumes:
+  db-data:
