@@ -1,6 +1,6 @@
 # PHP + MySQL Lab
 
-[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/OWNER/REPO)
+[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](   https://codespaces.new/czekster/php-mysql-lab)
 
 ## Start (students)
 
