@@ -26,8 +26,19 @@ inspecting the database in a browser — it isn't one of the three tiers.
 Tips:
 - At [github.com/codespaces](https://github.com/codespaces), click **⋯** next to your codespace and untick **Auto-delete codespace** so your work isn't removed after a period of inactivity.
 - Backup (optional): **⋯ → Publish to a new repository**.
-- Submitting: right-click the `src` folder in the file list → **Download…**, upload the zip.
+- Saving, backing up and submitting: see **How your work is saved** below.
 - Free allowance: 60 h/month on a normal GitHub account, 90 h/month if you verify as a student at [education.github.com](https://education.github.com). Delete codespaces you no longer need.
+
+### How your work is saved
+
+1. **Your work lives in your codespace.** Save with **Ctrl+S** (Cmd+S on Mac). Everything stays there between sessions; reopen it any time from [github.com/codespaces](https://github.com/codespaces).
+2. **Keep it from being deleted.** At [github.com/codespaces](https://github.com/codespaces), click **⋯** next to your codespace and **untick Auto-delete codespace**. Otherwise it's removed after a period of not being used.
+3. **Your changes never go to the lecturer's repository.** Nothing you do can break the original project.
+4. **Back up to your own GitHub (recommended):**
+   - Once: **⋯ → Publish to a new repository**. Choose **Private** so other students can't see your work.
+   - Each time you want a safe copy: click the **Source Control** icon on the left bar, type a short message (e.g. `login page done`), click **Commit**, then **Sync Changes**.
+   - If your codespace is ever deleted, open your own repository → **Code → Codespaces → +** and carry on.
+5. **Submitting:** right-click the `src` folder in the file list → **Download…** and choose where to save it on your computer. Zip that folder and upload it to Blackboard.
 
 ### Don't run out of free hours
 
