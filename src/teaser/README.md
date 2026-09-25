@@ -1,25 +1,21 @@
 # Teaser — Login + Results
 
 > **In Codespaces:** use the **Ports** tab instead of the `localhost` links below
-> (globe icon next to *phpmyadmin* for the database, next to port *80* for the app).
+> (globe icon next to *phpMyAdmin* for the database, next to *App* for the app).
 
-A minimal login flow: a form, a results page behind it, and one `users`
-table.
+A minimal login flow: a form, a results page behind it, and one `users` table.
 
-## Set up the database (one-time)
+## Database
 
-1. Open phpMyAdmin at **http://localhost:8081** (no login needed — see main
-   README).
-2. Select the `app_db` database on the left.
-3. Go to the **SQL** tab, paste the contents of `setup.sql`, click **Go**.
+The `users` table is created automatically the first time the database starts
+(MariaDB runs `setup.sql` on first launch).
 
-That creates the `users` table and adds one demo account:
+Demo account: username `alice`, password `password123`
 
-```
-Username: alice
-Password: password123
-```
+## Reset the table
+
+phpMyAdmin → `app_db` → **SQL** tab → paste `setup.sql` → **Go**.
 
 ## Try it
 
-Open **http://localhost:8080/teaser/** and log in with the demo account.
+Open **http://localhost:8080/teaser/** (or the *App* port in Codespaces) and log in.

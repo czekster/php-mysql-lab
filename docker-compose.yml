@@ -31,6 +31,7 @@ services:
       MARIADB_PASSWORD: ${DB_PASSWORD:-student123}
     volumes:
       - db_data:/var/lib/mysql
+      - ./src/teaser/setup.sql:/docker-entrypoint-initdb.d/10-teaser.sql:ro
     networks:
       - app-net
     restart: unless-stopped
