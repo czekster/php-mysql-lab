@@ -1,0 +1,17 @@
+{
+  "name": "Apache + PHP + MySQL lab",
+  "dockerComposeFile": "docker-compose.yml",
+  "service": "app",
+  "workspaceFolder": "/workspace",
+  "overrideCommand": false,
+  "shutdownAction": "stopCompose",
+  "forwardPorts": [80, "phpmyadmin:80"],
+  "portsAttributes": {
+    "80": { "label": "Website", "onAutoForward": "openBrowser" }
+  },
+  "hostRequirements": { "cpus": 2 },
+  "customizations": {
+    "vscode": { "extensions": ["bmewburn.vscode-intelephense-client"] },
+    "codespaces": { "openFiles": ["README.md", "public/index.php"] }
+  }
+}
