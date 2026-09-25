@@ -7,7 +7,7 @@
   "shutdownAction": "stopCompose",
   "forwardPorts": [80, 8081],
   "portsAttributes": {
-    "80":   { "label": "App", "onAutoForward": "openBrowser" },
+    "80":   { "label": "App", "onAutoForward": "notify" },
     "8081": { "label": "phpMyAdmin" }
   },
   "postStartCommand": "git config --global --add safe.directory /workspace",
