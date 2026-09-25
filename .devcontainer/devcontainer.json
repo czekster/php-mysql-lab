@@ -1,17 +1,18 @@
 {
-  "name": "Apache + PHP + MySQL lab",
-  "dockerComposeFile": "docker-compose.yml",
-  "service": "app",
+  "name": "Three-Tier Starter Kit (Apache + PHP + MariaDB)",
+  "dockerComposeFile": ["../docker-compose.yml", "docker-compose.codespaces.yml"],
+  "service": "web",
   "workspaceFolder": "/workspace",
   "overrideCommand": false,
   "shutdownAction": "stopCompose",
   "forwardPorts": [80, "phpmyadmin:80"],
   "portsAttributes": {
-    "80": { "label": "Website", "onAutoForward": "openBrowser" }
+    "80": { "label": "App", "onAutoForward": "openBrowser" }
   },
+  "postStartCommand": "git config --global --add safe.directory /workspace",
   "hostRequirements": { "cpus": 2 },
   "customizations": {
     "vscode": { "extensions": ["bmewburn.vscode-intelephense-client"] },
-    "codespaces": { "openFiles": ["README.md", "public/index.php"] }
+    "codespaces": { "openFiles": ["README.md", "src/index.php"] }
   }
 }

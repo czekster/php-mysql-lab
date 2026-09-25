@@ -1,0 +1,6 @@
+# Codespaces-only additions, merged on top of ../docker-compose.yml.
+# Paths are relative to the repo root (the first compose file's folder).
+services:
+  web:
+    volumes:
+      - .:/workspace:cached   # whole repo for the editor; src/ is still live at /var/www/html

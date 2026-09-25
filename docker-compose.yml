@@ -1,0 +1,59 @@
+services:
+
+  # ── PRESENTATION-facing / APPLICATION tier ────────────────────────────────
+  # Apache handles HTTP; PHP-FPM is the actual application server executing
+  # your code. They're split into two containers on purpose — see README.
+  web:
+    build: ./web
+    container_name: app_web
+    ports:
+      - "127.0.0.1:8080:80"
+    environment:
+      DB_NAME: ${DB_NAME:-app_db}
+      DB_USER: ${DB_USER:-student}
+      DB_PASSWORD: ${DB_PASSWORD:-student123}
+    volumes:
+      - ./src:/var/www/html
+    depends_on:
+      - db
+    networks:
+      - app-net
+    restart: unless-stopped
+
+  # ── DATA tier ──────────────────────────────────────────────────────────────
+  db:
+    image: mariadb:11
+    container_name: app_db
+    environment:
+      MARIADB_ROOT_PASSWORD: ${DB_ROOT_PASSWORD:-rootpass123}
+      MARIADB_DATABASE: ${DB_NAME:-app_db}
+      MARIADB_USER: ${DB_USER:-student}
+      MARIADB_PASSWORD: ${DB_PASSWORD:-student123}
+    volumes:
+      - db_data:/var/lib/mysql
+    networks:
+      - app-net
+    restart: unless-stopped
+
+  # ── Optional: DB inspection tool (not one of the three tiers — a dev aid) ──
+  phpmyadmin:
+    image: phpmyadmin:5
+    container_name: app_phpmyadmin
+    environment:
+      PMA_HOST: db
+      PMA_USER: ${DB_USER:-student}
+      PMA_PASSWORD: ${DB_PASSWORD:-student123}
+    ports:
+      - "127.0.0.1:8081:80"
+    depends_on:
+      - db
+    networks:
+      - app-net
+    restart: unless-stopped
+
+networks:
+  app-net:
+    driver: bridge
+
+volumes:
+  db_data:
