@@ -5,9 +5,10 @@
   "workspaceFolder": "/workspace",
   "overrideCommand": false,
   "shutdownAction": "stopCompose",
-  "forwardPorts": [80, "phpmyadmin:80"],
+  "forwardPorts": [80, 8081],
   "portsAttributes": {
-    "80": { "label": "App", "onAutoForward": "openBrowser" }
+    "80":   { "label": "App", "onAutoForward": "openBrowser" },
+    "8081": { "label": "phpMyAdmin" }
   },
   "postStartCommand": "git config --global --add safe.directory /workspace",
   "hostRequirements": { "cpus": 2 },

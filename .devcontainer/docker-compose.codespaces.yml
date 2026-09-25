@@ -3,4 +3,5 @@
 services:
   web:
     volumes:
-      - .:/workspace:cached   # whole repo for the editor; src/ is still live at /var/www/html
+      - .:/workspace:cached
+      - ./.devcontainer/phpmyadmin-proxy.conf:/etc/apache2/conf-enabled/phpmyadmin-proxy.conf:ro
