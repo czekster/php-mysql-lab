@@ -19,7 +19,7 @@ inspecting the database in a browser — it isn't one of the three tiers.
 [![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/czekster/php-mysql-lab)
 
 1. Click the button above → **Create codespace**. Wait 2–3 minutes the first time.
-2. Your app opens in a new tab. If it doesn't: **Ports** tab (bottom of the screen) → globe icon next to port **80**.
+2. Your app opens in a new tab. If it doesn't: **Ports** tab (bottom of the screen) → globe icon next to **App (8080)**.
 3. phpMyAdmin: **Ports** tab → globe icon next to **phpmyadmin**.
 4. Edit files in `src/`, save, refresh the browser tab. That's it.
 
