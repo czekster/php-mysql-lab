@@ -16,7 +16,7 @@ inspecting the database in a browser — it isn't one of the three tiers.
 
 ## Option A — GitHub Codespaces (no install, works on university PCs)
 
-[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/czekster/php-mysql-lab)
+[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/czekster/starter-kit)
 
 1. Click the button above → **Create codespace**. Wait 2–3 minutes the first time.
 2. Your app opens in a new tab. If it doesn't: **Ports** tab (bottom of the screen) → globe icon next to **App (8080)**.
@@ -65,8 +65,8 @@ Every step is explained in more detail further down if something breaks.
 1. Install Git (see **Prerequisites** below for your OS)
 2. Install Docker Desktop (see **Prerequisites** below)
 3. Open a terminal and go to a folder on your machine, e.g. `cd C:\tmp` (Windows) or `cd /tmp` (Linux)
-4. `git clone https://github.com/czekster/php-mysql-lab.git`
-5. `cd php-mysql-lab`
+4. `git clone https://github.com/czekster/starter-kit.git`
+5. `cd starter-kit`
 6. `copy .env.example .env` (Windows) or `cp .env.example .env` (Linux) — the defaults work as-is
 7. Start Docker Desktop and wait for it to finish loading
 8. `docker compose up --build` (only needs `--build` the very first time)
@@ -138,8 +138,8 @@ the Git and post-install steps are the same either way.
 - Click Windows key, followed by run "Git CMD"
 
 ```bash
-git clone https://github.com/czekster/php-mysql-lab.git
-cd php-mysql-lab
+git clone https://github.com/czekster/starter-kit.git
+cd starter-kit
 copy .env.example .env          # the default values work out of the box
 docker compose up --build -d    # -d means it will run "detached"
 ```
