@@ -29,6 +29,19 @@ Tips:
 - Submitting: right-click the `src` folder in the file list → **Download…**, upload the zip.
 - Free allowance: 60 h/month on a normal GitHub account, 90 h/month if you verify as a student at [education.github.com](https://education.github.com). Delete codespaces you no longer need.
 
+### Don't run out of free hours
+
+You get 60 free hours a month (90 if you verify as a student). You can't be charged, but if you run out, Codespaces is blocked until the 1st of next month, so don't get caught near a deadline.
+
+1. **Verify as a student** at [education.github.com](https://education.github.com) to get 90 hours instead of 60.
+2. **Stop your codespace when you finish.** Closing the tab isn't enough: go to [github.com/codespaces](https://github.com/codespaces) → **⋯** → **Stop codespace**.
+3. **Lower the idle timeout.** GitHub **Settings → Codespaces → Default idle timeout**, set it to **15 minutes**.
+4. **Use the 2-core machine** (the default). Bigger machines use your hours 2–4× faster.
+5. **Keep just one codespace.** Delete old ones. Stopped codespaces still use your storage allowance.
+6. **Check your usage:** GitHub **Settings → Billing and licensing → Usage**. GitHub also emails you at 75%, 90% and 100%.
+
+Ran out anyway? Your work is safe and comes back when the quota resets. If you have Docker at home, Option B below runs the same project.
+
 ## Option B — Docker on your own machine
 
 Use this if you have Docker installed at home. Everything below applies to Option B.
